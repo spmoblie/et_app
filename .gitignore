@@ -1,6 +1,6 @@
 *.iml
 *.properties
-StylistPark/.gradle/
-StylistPark/.idea/
-StylistPark/gradle/
-StylistPark/build/
+EliteInventory/.gradle/
+EliteInventory/.idea/
+EliteInventory/gradle/
+EliteInventory/build/
