@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color_appui"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_padding_15">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/back_color_block"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_attribute_00"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/goods_item_tv_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            style="@style/set_line_horizontal_bg"
+            android:layout_marginTop="@dimen/margin_padding_10"
+            android:background="@color/text_color_black" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_padding_10">
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_01" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_01"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_02" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_02"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_03" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_03"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_04" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_04"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_05" />
+
+                        <TextView
+                            android:id="@+id/goods_tv_05"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_06"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_06"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_07"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_07"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_08"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_08"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_09"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_09"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_10"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_10"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_11"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_11"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_12"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_12"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/goods_attribute_tv"
+                            android:text="@string/goods_attribute_13"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/goods_tv_13"
+                            style="@style/goods_attribute_tv"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            style="@style/set_line_horizontal_bg"
+            android:layout_marginBottom="@dimen/margin_padding_10"
+            android:layout_marginTop="@dimen/margin_padding_10"
+            android:background="@color/text_color_black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/back_color_block"
+        android:padding="@dimen/margin_padding_10">
+
+        <ImageView
+            android:id="@+id/goods_iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_delete" />
+
+        <ImageView
+            android:id="@+id/goods_iv_picture"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_padding_60" />
+    </RelativeLayout>
+</LinearLayout>

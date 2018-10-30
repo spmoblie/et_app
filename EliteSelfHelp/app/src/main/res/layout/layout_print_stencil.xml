@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_padding_25"
+    android:layout_marginRight="@dimen/margin_padding_15"
+    android:padding="@dimen/margin_padding_15"
+    android:scrollbars="none"
+    android:background="@color/back_color_print">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/stencil_tv_1"
+            style="@style/setting_print_tv"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_padding_15"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_22"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_2"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_code"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_time"
+            style="@style/setting_print_tv"/>
+
+        <include
+            android:id="@+id/stencil_lo_bill_1"
+            layout="@layout/layout_print_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_15"/>
+
+        <include
+            android:id="@+id/stencil_lo_bill_2"
+            layout="@layout/layout_print_bill"/>
+
+        <include
+            android:id="@+id/stencil_lo_bill_3"
+            layout="@layout/layout_print_bill"/>
+
+        <include
+            android:id="@+id/stencil_lo_bill_4"
+            layout="@layout/layout_print_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_15"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_pay_type"
+            style="@style/setting_print_tv"
+            android:text="@string/print_pay_type"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_3"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_4"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_5"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_6"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_7"
+            style="@style/setting_print_tv"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_line"
+            style="@style/setting_print_tv"
+            android:layout_centerHorizontal="true"
+            android:text="================================"/>
+
+        <TextView
+            android:id="@+id/stencil_tv_thanks"
+            style="@style/setting_print_tv"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/print_thanks"/>
+
+        <ImageView
+            android:id="@+id/stencil_iv_bar_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_15"/>
+    </LinearLayout>
+</ScrollView>

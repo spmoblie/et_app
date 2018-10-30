@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 常用颜色值 -->
+    <color name="text_color_style">#000000</color><!-- 风格 -->
+    <color name="text_color_white">#FFFFFF</color><!-- 白色 -->
+    <color name="text_color_black">#000000</color><!-- 黑色 -->
+    <color name="text_color_greys">#999999</color><!-- 灰色 -->
+    <color name="text_color_redss">#FF0000</color><!-- 红色 -->
+    <color name="text_color_yello">#FFFF00</color><!-- 黄色 -->
+    <color name="text_color_green">#008000</color><!-- 绿色 -->
+
+    <!-- 按键文字颜色黑 -->
+    <color name="text_color_btn_b">#000000</color>
+    <!-- 按键文字颜色白 -->
+    <color name="text_color_btn_w">#FFFFFF</color>
+    <!-- 标题栏文字颜色 -->
+    <color name="text_color_title">#10AF9A</color>
+    <!-- 内容区文字颜色 -->
+    <color name="text_color_conte">#333333</color>
+    <!-- 标识区文字颜色 -->
+    <color name="text_color_label">#999999</color>
+    <!-- 提示语文字颜色 -->
+    <color name="text_color_input">#CCCCCC</color>
+    <!-- 禁操作文字颜色 -->
+    <color name="text_color_debar">#DDDDDD</color>
+    <!-- 负金额文字颜色 -->
+    <color name="text_color_lower">#10AF9A</color>
+    <!-- 红点提醒颜色值 -->
+    <color name="text_color_warns">#FF0000</color>
+    <!-- 商品价格颜色值 -->
+    <color name="text_color_price">#000000</color>
+
+    <!-- AppUI背景色 -->
+    <color name="back_color_appui">#800000</color>
+    <!-- AppUI区块色 -->
+    <color name="back_color_block">#FFFFFF</color>
+    <!-- AppUI状态色 -->
+    <color name="back_color_state">#10AF9A</color>
+    <!-- AppUI分割线 -->
+    <color name="back_color_div_0">#10AF9A</color>
+    <!-- 小票据背景颜色 -->
+    <color name="back_color_print">#F6F6F6</color>
+
+    <!-- 常用透明色 -->
+    <color name="back_color_lc_05">#7F000000</color><!-- 黑色50% -->
+    <color name="back_color_lc_08">#33000000</color><!-- 黑色80% -->
+    <color name="back_color_lc_10">#00000000</color><!-- 黑色00% -->
+
+    <!-- 系统状态色 -->
+    <color name="colorPrimary">@color/text_color_style</color>
+    <color name="colorPrimaryDark">@color/text_color_style</color>
+    <color name="colorAccent">@color/text_color_style</color>
+
+</resources>

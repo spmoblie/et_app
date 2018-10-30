@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.elite.selfhelp"
+    android:versionCode="1"
+    android:versionName="1.0.1">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <!--App自启动权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!--读取OTG和文件权限-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.hardware.usb.host" android:required="false" />
+    <!--因为部分手机上是没有otg的所以需要加入特性-->
+    <uses-feature android:name="android.hardware.usb.host" android:required="true" />
+
+    <application
+        android:name="com.elite.selfhelp.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.elite.selfhelp.activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.elite.selfhelp.receiver.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.elite.selfhelp.activity.OrderActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name="com.elite.selfhelp.activity.QueryActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name="com.elite.selfhelp.activity.GoodsActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name="com.elite.selfhelp.activity.SettingActivity"
+            android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>

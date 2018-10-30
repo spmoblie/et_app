@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.elite.selfhelp"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = []
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation files('libs/printersdk-1155.jar')
+    implementation files('libs/printetsdk-4070.jar')
+    implementation files('libs/zxing-1.6-core.jar')
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.2.1'
+    // apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    // RxJava
+    implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    // Okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}

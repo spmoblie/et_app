@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color_appui"
+    android:padding="@dimen/margin_padding_15"
+    android:orientation="horizontal"
+    tools:context="com.elite.selfhelp.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/back_color_lc_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:padding="@dimen/margin_padding_10"
+            android:background="@drawable/shape_bg_border_state_4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/margin_padding_10"
+                android:paddingBottom="@dimen/margin_padding_10"
+                android:background="@drawable/shape_bg_buttom_state_4"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/goods_head_tv"
+                    android:layout_weight="10"
+                    android:paddingLeft="@dimen/margin_padding_10"
+                    android:text="@string/goods_name"/>
+
+                <TextView
+                    style="@style/goods_head_tv"
+                    android:text="@string/goods_unit_price"/>
+
+                <TextView
+                    style="@style/goods_head_tv"
+                    android:layout_weight="3"
+                    android:text="@string/goods_number"/>
+
+                <TextView
+                    style="@style/goods_head_tv"
+                    android:layout_marginRight="@dimen/goods_delete_size"
+                    android:text="@string/goods_subtotal"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/main_rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_padding_15"
+            android:layout_marginTop="@dimen/margin_padding_2"
+            android:background="@drawable/shape_bg_border_state_4" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/goods_amount"
+                android:textSize="@dimen/goods_total_tv_size"
+                android:textColor="@color/text_color_black"/>
+
+            <TextView
+                android:id="@+id/main_tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/goods_total_tv_size"
+                android:textColor="@color/text_color_black"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_padding_2"
+            android:padding="@dimen/margin_padding_10"
+            android:background="@drawable/shape_bg_border_state_4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/main_bt_pay"
+                style="@style/buttom_two"
+                android:text="@string/goods_pay_confirm"/>
+
+            <Button
+                android:id="@+id/main_bt_clear"
+                style="@style/buttom_two"
+                android:layout_marginLeft="@dimen/margin_padding_10"
+                android:text="@string/goods_all_clear"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/goods_module_space"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/main_et_code"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:hint="@string/text_input_code_hint"
+            android:textSize="@dimen/text_size_20"
+            android:textColor="@color/text_color_black"
+            android:textColorHint="@color/text_color_input"
+            android:background="@drawable/shape_bg_border_state_4"/>
+
+        <Button
+            android:id="@+id/main_bt_add"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/goods_module_space"
+            android:background="@drawable/shape_bg_buttom_state_4"
+            android:text="@string/goods_add_list"
+            android:textSize="@dimen/buttom_text_size"
+            android:textColor="@color/text_color_white"/>
+
+        <Button
+            android:id="@+id/main_bt_query"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/goods_module_space"
+            android:background="@drawable/shape_bg_buttom_state_4"
+            android:text="@string/goods_drugs_query"
+            android:textSize="@dimen/buttom_text_size"
+            android:textColor="@color/text_color_white"/>
+
+        <Button
+            android:id="@+id/main_bt_order"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/goods_module_space"
+            android:background="@drawable/shape_bg_buttom_state_4"
+            android:text="@string/goods_order_query"
+            android:textSize="@dimen/buttom_text_size"
+            android:textColor="@color/text_color_white"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/main_bt_print"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/goods_module_space"
+            android:background="@drawable/shape_bg_buttom_state_4"
+            android:text="@string/goods_print_ticket"
+            android:textSize="@dimen/buttom_text_size"
+            android:textColor="@color/text_color_white"/>
+
+        <Button
+            android:id="@+id/main_bt_setting"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/goods_module_space"
+            android:background="@drawable/shape_bg_buttom_state_4"
+            android:text="@string/setting_title"
+            android:textSize="@dimen/buttom_text_size"
+            android:textColor="@color/text_color_white"/>
+    </LinearLayout>
+
+</LinearLayout>

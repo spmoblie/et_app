@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/margin_padding_5"
+    android:background="@color/back_color_print"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/print_tv_bill_1"
+        style="@style/setting_print_goods_tv"
+        android:layout_weight="3"/>
+
+    <TextView
+        android:id="@+id/print_tv_bill_2"
+        style="@style/setting_print_goods_tv"/>
+
+    <TextView
+        android:id="@+id/print_tv_bill_3"
+        style="@style/setting_print_goods_tv"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/print_tv_bill_4"
+        style="@style/setting_print_goods_tv"
+        android:gravity="right"/>
+</LinearLayout>

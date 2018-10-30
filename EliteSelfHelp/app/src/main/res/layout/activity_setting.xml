@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_color_appui"
+    android:padding="@dimen/margin_padding_15"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bg_border_state_4"
+        android:padding="@dimen/margin_padding_10"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:background="@drawable/shape_bg_border_state_4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_padding_2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/setting_item_rl">
+
+                    <TextView
+                        android:id="@+id/setting_item_tv_01"
+                        style="@style/setting_item_tv"
+                        android:text="@string/setting_item_01"/>
+
+                    <ImageView
+                        style="@style/set_line_horizontal_bg"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/setting_item_rl">
+
+                    <TextView
+                        android:id="@+id/setting_item_tv_02"
+                        style="@style/setting_item_tv"
+                        android:text="@string/setting_item_02"/>
+
+                    <ImageView
+                        style="@style/set_line_horizontal_bg"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/setting_item_rl">
+
+                    <TextView
+                        android:id="@+id/setting_item_tv_03"
+                        style="@style/setting_item_tv"
+                        android:text="@string/setting_item_03"/>
+
+                    <ImageView
+                        style="@style/set_line_horizontal_bg"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/setting_item_rl">
+
+                    <TextView
+                        android:id="@+id/setting_item_tv_04"
+                        style="@style/setting_item_tv"
+                        android:text="@string/setting_item_04"/>
+
+                    <ImageView
+                        style="@style/set_line_horizontal_bg"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/setting_show_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_marginLeft="@dimen/margin_padding_10"
+            android:padding="@dimen/margin_padding_2"
+            android:background="@drawable/shape_bg_border_state_4">
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

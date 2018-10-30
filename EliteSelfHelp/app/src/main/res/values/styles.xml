@@ -1,0 +1,148 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 通用对话框样式 -->
+    <style name="MyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/back_color_lc_10</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="buttom_two">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/shape_bg_buttom_state_4</item>
+        <item name="android:textSize">@dimen/buttom_text_size</item>
+        <item name="android:textColor">@color/text_color_white</item>
+    </style>
+
+    <style name="setting_item_rl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setting_item_height</item>
+    </style>
+
+    <style name="setting_item_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/setting_text_size</item>
+        <item name="android:textColor">@color/selector_setting_item_tv</item>
+    </style>
+
+    <style name="setting_printer_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+    </style>
+
+    <style name="setting_printer_tv_size">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableLeft">@drawable/selector_printer_tv_size</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+    </style>
+
+    <style name="setting_edit_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="setting_edit_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@drawable/selector_printer_tv_type</item>
+        <item name="android:drawablePadding">@dimen/margin_padding_5</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+    </style>
+
+    <style name="setting_edit_et">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_10</item>
+        <item name="android:padding">@dimen/margin_padding_5</item>
+        <item name="android:background">@drawable/shape_bg_border_state_4</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+        <item name="android:textColorHint">@color/text_color_input</item>
+    </style>
+
+    <style name="setting_print_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+    </style>
+
+    <style name="setting_print_goods_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/text_color_conte</item>
+    </style>
+
+    <style name="goods_head_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/goods_item_tv_size</item>
+        <item name="android:textColor">@color/text_color_white</item>
+    </style>
+
+    <style name="goods_item_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/goods_item_tv_size</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="goods_attribute_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/margin_padding_5</item>
+        <item name="android:paddingBottom">@dimen/margin_padding_5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/goods_item_tv_size</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <!-- 水平分割线 -->
+    <style name="set_line_horizontal_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_padding_05</item>
+        <item name="android:background">@color/back_color_div_0</item>
+    </style>
+
+    <!-- 垂直分割线 -->
+    <style name="set_line_vertical_bg">
+        <item name="android:layout_width">@dimen/margin_padding_05</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/back_color_div_0</item>
+    </style>
+
+</resources>
