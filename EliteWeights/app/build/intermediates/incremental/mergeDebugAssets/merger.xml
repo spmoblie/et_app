@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/root/AndroidStudioProjects/EliteWeights/app/src/main/assets"><file name="icon_apple.jpg" path="/root/AndroidStudioProjects/EliteWeights/app/src/main/assets/icon_apple.jpg"/></source><source path="/root/AndroidStudioProjects/EliteWeights/app/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/root/AndroidStudioProjects/EliteWeights/app/src/debug/assets"/></dataSet></merger>

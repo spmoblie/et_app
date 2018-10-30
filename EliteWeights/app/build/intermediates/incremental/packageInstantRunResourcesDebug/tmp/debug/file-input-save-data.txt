@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Oct 23 17:47:21 CST 2018
+0.baseType=DIRECTORY
+0.base=/root/AndroidStudioProjects/EliteWeights/app/build/intermediates/assets/debug
+0.path=icon_apple.jpg
+0.set=ASSET
+count=1

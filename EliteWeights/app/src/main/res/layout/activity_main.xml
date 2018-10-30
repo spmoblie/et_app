@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/rl_main"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="30dp"
+	android:background="@color/back_color_appui">
+
+	<SurfaceView
+		android:id="@+id/sv_camera"
+		android:layout_width="320dp"
+		android:layout_height="180dp"
+		android:visibility="gone"/>
+
+	<ImageView
+		android:id="@+id/camera_iv_show"
+		android:layout_width="320dp"
+		android:layout_height="180dp"
+		android:layout_marginTop="30dp"
+		android:layout_below="@+id/sv_camera"
+		android:visibility="gone"/>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/main_bt_test_rfid"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="@dimen/margin_padding_50"
+			android:paddingTop="@dimen/margin_padding_30"
+			android:paddingRight="@dimen/margin_padding_50"
+			android:paddingBottom="@dimen/margin_padding_30"
+			android:background="@drawable/shape_bg_buttom_state_4"
+			android:text="RFID测试"
+			android:textSize="@dimen/text_size_28"
+			android:textColor="@color/text_color_btn_w"/>
+
+		<Button
+			android:id="@+id/main_bt_test_print"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="100dp"
+			android:paddingLeft="@dimen/margin_padding_50"
+			android:paddingTop="@dimen/margin_padding_30"
+			android:paddingRight="@dimen/margin_padding_50"
+			android:paddingBottom="@dimen/margin_padding_30"
+			android:background="@drawable/shape_bg_buttom_state_4"
+			android:text="打印测试"
+			android:textSize="@dimen/text_size_28"
+			android:textColor="@color/text_color_btn_w"/>
+
+		<Button
+			android:id="@+id/main_bt_setting"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="100dp"
+			android:paddingLeft="@dimen/margin_padding_50"
+			android:paddingTop="@dimen/margin_padding_30"
+			android:paddingRight="@dimen/margin_padding_50"
+			android:paddingBottom="@dimen/margin_padding_30"
+			android:background="@drawable/shape_bg_buttom_state_4"
+			android:text="参数设置"
+			android:textSize="@dimen/text_size_28"
+			android:textColor="@color/text_color_btn_w"/>
+	</LinearLayout>
+
+	<Button
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:background="@color/back_color_lc_10"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:visibility="gone"/>
+
+</RelativeLayout>

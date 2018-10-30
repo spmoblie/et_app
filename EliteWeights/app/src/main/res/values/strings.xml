@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- testing version -->
+    <string name="app_name">EliteWeights</string>
+
+    <!-- setting -->
+    <string name="setting">设置</string>
+    <string name="setting_title">"参数配置"</string>
+    <string name="setting_test_result">"串口测试："</string>
+    <string name="setting_test_start">"开始测试"</string>
+    <string name="setting_test_ok">"串口可用"</string>
+    <string name="setting_test_fail">"没有串口读/写权限！"</string>
+    <string name="setting_select_serial_port">"请选择串口"</string>
+
+    <!-- other -->
+    <string name="cancel">"取消"</string>
+    <string name="confirm">"确定"</string>
+    <string name="day">d</string>
+    <string name="hour">h</string>
+    <string name="minute">m</string>
+    <string name="second">s</string>
+
+    <!-- UI Elements -->
+    <string name="btn_capture">Click</string>
+
+    <!-- Toast Messages -->
+    <string name="camera_not_found">No camera harware found</string>
+    <string name="take_photo_help">Touch anywhere on screen to take picture</string>
+
+    <string name="front_capture">front capture</string>
+    <string name="back_capture">back capture</string>
+    <string name="front_record">front record</string>
+    <string name="back_record">back record</string>
+    <string name="stop_record">stop record</string>
+</resources>

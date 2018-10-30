@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@color/back_color_appui">
+
+    <include
+        android:id="@+id/rfid_ic_title"
+        layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:id="@+id/rfid_ll_rfids"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="@dimen/margin_padding_15"
+        android:background="@drawable/shape_frame_bg_app_hollow_4"
+        app:layout_constraintTop_toBottomOf="@+id/rfid_ic_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.65"
+        app:layout_constraintHeight_percent="0.85"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_padding_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_conte"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:layout_marginLeft="@dimen/margin_padding_10"
+                android:gravity="center"
+                android:text="EPC"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_conte"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:layout_marginLeft="@dimen/margin_padding_10"
+                android:gravity="center"
+                android:text="Data"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_conte"/>
+        </LinearLayout>
+
+        <ImageView
+            style="@style/set_line_horizontal_bg" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rfid_rv_rfids"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rfid_tv_weight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/rfid_ll_rfids"
+        app:layout_constraintRight_toRightOf="@+id/rfid_ic_title"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/shape_frame_bg_app_hollow_4"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="0.00kg"
+        android:textSize="50sp"
+        android:textColor="@color/text_color_redss"/>
+
+    <TextView
+        android:id="@+id/rfid_tv_read"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/rfid_ll_rfids"
+        app:layout_constraintBottom_toBottomOf="@+id/rfid_ll_rfids"
+        app:layout_constraintRight_toRightOf="@+id/rfid_ic_title"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/shape_frame_bg_app_hollow_4"
+        android:gravity="center"
+        android:text="读标签"
+        android:textSize="40sp"
+        android:textColor="@color/text_color_conte"/>
+
+    <TextView
+        android:id="@+id/rfid_tv_write"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rfid_ll_rfids"
+        app:layout_constraintRight_toRightOf="@+id/rfid_ic_title"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHeight_percent="0.25"
+        android:background="@drawable/shape_frame_bg_app_hollow_4"
+        android:gravity="center"
+        android:text="写标签"
+        android:textSize="40sp"
+        android:textColor="@color/text_color_conte"/>
+
+</android.support.constraint.ConstraintLayout>

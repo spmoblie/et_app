@@ -1,10 +1,17 @@
 *.iml
 *.properties
+
 EliteInventory/.gradle/
 EliteInventory/.idea/
 EliteInventory/gradle/
 EliteInventory/build/
+
 EliteSelfHelp/.gradle/
 EliteSelfHelp/.idea/
 EliteSelfHelp/gradle/
 EliteSelfHelp/build/
+
+EliteWeights/.gradle/
+EliteWeights/.idea/
+EliteWeights/gradle/
+EliteWeights/build/

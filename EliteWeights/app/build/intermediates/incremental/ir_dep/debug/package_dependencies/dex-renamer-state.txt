@@ -1,0 +1,4 @@
+#Tue Oct 23 17:47:27 CST 2018
+base.0=/root/AndroidStudioProjects/EliteWeights/app/build/intermediates/transforms/dexMerger/debug/10
+path.0=classes.dex
+renamed.0=classes.dex
