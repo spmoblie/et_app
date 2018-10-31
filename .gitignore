@@ -1,8 +1,8 @@
 *.iml
 *.properties
 
-EliteInventory/gradle/
 EliteInventory/build/
+EliteInventory/gradle/
 EliteInventory/.gradle/
 EliteInventory/.idea/
 
