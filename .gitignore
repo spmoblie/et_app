@@ -1,17 +1,18 @@
 *.iml
 *.properties
 
-EliteInventory/.gradle/
-EliteInventory/.idea/
 EliteInventory/gradle/
 EliteInventory/build/
+EliteInventory/.gradle/
+EliteInventory/.idea/
 
+EliteSelfHelp/build/
+EliteSelfHelp/gradle/
 EliteSelfHelp/.gradle/
 EliteSelfHelp/.idea/
-EliteSelfHelp/gradle/
-EliteSelfHelp/build/
 
+EliteWeights/build/
+EliteWeights/gradle/
 EliteWeights/.gradle/
 EliteWeights/.idea/
-EliteWeights/gradle/
-EliteWeights/build/
+EliteWeights/import-summary.txt
