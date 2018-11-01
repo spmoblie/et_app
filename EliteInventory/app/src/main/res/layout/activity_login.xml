@@ -118,6 +118,7 @@
             <EditText
                 android:id="@+id/et_input_password"
                 style="@style/login_input_et"
+                android:inputType="numberPassword"
                 app:layout_constraintLeft_toLeftOf="@id/et_input_user"
                 app:layout_constraintTop_toBottomOf="@id/et_input_user"
                 app:layout_constraintWidth_percent="0.35"
@@ -138,7 +139,7 @@
                 android:layout_marginTop="@dimen/margin_padding_10"
                 app:layout_constraintLeft_toRightOf="@id/et_input_work"
                 app:layout_constraintTop_toBottomOf="@id/et_input_data"
-                android:src="@mipmap/ic_input_work_2"/>
+                android:src="@drawable/selector_image_work"/>
 
             <ImageView
                 android:id="@+id/iv_input_password_2"
@@ -147,7 +148,7 @@
                 android:layout_marginTop="@dimen/margin_padding_10"
                 app:layout_constraintLeft_toRightOf="@id/et_input_password"
                 app:layout_constraintTop_toBottomOf="@id/et_input_user"
-                android:src="@mipmap/ic_input_password_2"/>
+                android:src="@drawable/selector_image_password"/>
 
         </android.support.constraint.ConstraintLayout>
 

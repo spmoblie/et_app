@@ -5,5 +5,9 @@
     <!-- other -->
     <string name="cancel">"取消"</string>
     <string name="confirm">"确定"</string>
+    <string name="day">d</string>
+    <string name="hour">h</string>
+    <string name="minute">m</string>
+    <string name="second">s</string>
 
 </resources>

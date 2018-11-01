@@ -1,16 +1,19 @@
 package com.elite.inventory.activity;
 
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.InputType;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.bigkoo.pickerview.TimePickerView;
 import com.elite.inventory.R;
+import com.elite.inventory.config.AppConfig;
+import com.elite.inventory.utils.StringUtils;
+import com.elite.inventory.utils.TimeUtils;
+import com.elite.inventory.utils.ToastUtils;
 
-import java.lang.reflect.Method;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,7 +86,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @BindView(R.id.iv_login_number_enter)
     ImageView ivLoginNumberEnter;
 
-    boolean isData, isWord, isUser, isPassWord, isPetty;
+    TimePickerView pvTime;
+    boolean isData, isWord, isUser, isPassWord, isPetty, orAB, isShow;
+    String userStr, passwordStr;
 
 
     @Override
@@ -97,6 +102,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void init() {
+        orAB = sp.getBoolean(AppConfig.KEY_WORK, false);
+        userStr = sp.getString(AppConfig.KEY_USER, AppConfig.DEFAULT_USER);
+        passwordStr = sp.getString(AppConfig.KEY_PASSWORD, AppConfig.DEFAULT_PASSWORD);
+
+        ivInputWork2.setOnClickListener(this);
+        ivInputPassword2.setOnClickListener(this);
         ivLoginNumber00.setOnClickListener(this);
         ivLoginNumber01.setOnClickListener(this);
         ivLoginNumber02.setOnClickListener(this);
@@ -121,30 +132,51 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         disableShowSoftInput(etInputPassword);
         disableShowSoftInput(etInputPetty);
 
+        etInputData.setText(TimeUtils.getTimeStr("yyyy-MM-dd"));
+        etInputData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePicker();
+            }
+        });
         etInputData.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View view, boolean b) {
                 isData = b;
             }
         });
-        etInputWork.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+        changeWorks();
+        etInputWork.setFocusable(false);
+        etInputWork.setFocusableInTouchMode(false);
+        /*etInputWork.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View view, boolean b) {
                 isWord = b;
             }
-        });
+        });*/
+
+        etInputUser.setFocusable(true);
+        etInputUser.setFocusableInTouchMode(true);
+        etInputUser.requestFocus();
+        isUser = true;
+        etInputUser.setText(userStr);
+        etInputUser.setSelection(etInputUser.length());
         etInputUser.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View view, boolean b) {
                 isUser = b;
             }
         });
+
+        isShow = false;
         etInputPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
                 isPassWord = b;
             }
         });
+
         etInputPetty.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -153,9 +185,62 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         });
     }
 
+    /**
+     * 显示日历控件
+     */
+    private void showDatePicker() {
+        if (pvTime == null) {
+            pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTimeSelectListener() {
+
+                @Override
+                public void onTimeSelect(Date date, View v) {
+                    if (etInputData != null) {
+                        etInputData.setText(TimeUtils.dateToStr(date, "yyyy-MM-dd"));
+                        etInputData.setSelection(etInputData.length());
+                    }
+                }
+
+            })
+                    .setType(new boolean[]{true, true, true, false, false, false})// 默认全部显示
+//                    .setTitleText("Title")//标题文字
+//                    .setTitleColor(Color.BLACK)//标题文字颜色
+                    .setTitleBgColor(getColor(R.color.back_color_lc_08))//标题背景颜色 Night mode
+                    .setTitleSize(22)//标题文字大小
+                    .setContentSize(22)//滚轮文字大小
+                    .setSubmitText("确定")//确认按钮文字
+                    .setSubmitColor(0xFFF58807)//确定按钮文字颜色
+                    .setCancelText("取消")//取消按钮文字
+                    .setCancelColor(0xFFF58807)//取消按钮文字颜色
+                    .setDividerColor(0xFFF58807)//居中横条边框颜色
+                    .setTextColorOut(0xFFF58807)//非居中日期文字颜色
+                    .setTextColorCenter(0xFFF58807)//居中日期文字颜色
+//                    .setOutSideCancelable(true)//点击屏幕，点在控件外部范围时，是否取消显示
+//                    .isCyclic(true)//是否循环滚动
+                    .setBgColor(getColor(R.color.back_color_lc_08))//滚轮背景颜色 Night mode
+//                    .setDate(selectedDate)// 如果不设置的话，默认是系统时间
+//                    .setRangDate(startDate,endDate)//起始终止年月日设定
+//                    .setLabel("年","月","日","时","分","秒")//默认设置为年月日时分秒
+                    .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
+//                    .isDialog(true)//是否显示为对话框样式
+                    .build();
+            pvTime.show();
+        } else {
+            pvTime.show();
+        }
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.iv_input_work_2:
+                orAB = !orAB;
+                changeWorks();
+                sp.edit().putBoolean(AppConfig.KEY_WORK, orAB).apply();
+                break;
+            case R.id.iv_input_password_2:
+                isShow = !isShow;
+                updatePasswordStatus();
+                break;
             case R.id.iv_login_number_00:
                 inputText("0");
                 break;
@@ -286,8 +371,58 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             case "quit":
                 break;
             case "enter":
+                String et_data = etInputData.getText().toString();
+                if (StringUtils.isNull(et_data)) {
+                    ToastUtils.showToast("请选择日期", 1000);
+                    return;
+                }
+                String et_user = etInputUser.getText().toString();
+                if (StringUtils.isNull(et_user)) {
+                    ToastUtils.showToast("请输入用户名", 1000);
+                    return;
+                }
+                String et_password = etInputPassword.getText().toString();
+                if (StringUtils.isNull(et_password)) {
+                    ToastUtils.showToast("请输入密码", 1000);
+                    return;
+                }
+                String et_petty = etInputPetty.getText().toString();
+                if (StringUtils.isNull(et_petty)) {
+                    ToastUtils.showToast("请输入备用金", 1000);
+                    return;
+                }
+                if (!userStr.equals(et_user) || !passwordStr.equals(et_password)) {
+                    ToastUtils.showToast("用户名不存在或秘密错误！", 1000);
+                    return;
+                }
+                ToastUtils.showToast("OK", 1000);
                 break;
         }
+    }
+
+    /**
+     * 切换班次
+     */
+    private void changeWorks() {
+        if (orAB) {
+            etInputWork.setText("B");
+        } else {
+            etInputWork.setText("A");
+        }
+        ivInputWork2.setSelected(orAB);
+    }
+
+    /**
+     * 更新密码输入框密码显示的状态
+     */
+    private void updatePasswordStatus() {
+        if (isShow) { //显示密码
+            etInputPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        }else { //隐藏密码
+            etInputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        }
+        etInputPassword.setSelection(etInputPassword.length()); //调整光标至最后
+        ivInputPassword2.setSelected(isShow);
     }
 
 }

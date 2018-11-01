@@ -51,44 +51,14 @@ public class AppConfig {
 	 ******************************************* Key设置结束 ******************************************
 	 */
 
-	// 缓存Key_串口号
-	public static final String KEY_PORT = "key_prot";
-	// 缓存Key_波特率
-	public static final String KEY_BAUD = "key_baud";
-	// 缓存Key_打印机连接状态
-	public static final String KEY_CONNECT = "key_connect";
-	// 缓存Key_打印机类型
-	public static final String KEY_PRINTER = "key_printer";
-	// 缓存Key_打印机VID
-	public static final String KEY_PRINTER_VID = "key_printer_vid";
-	// 缓存Key_打印纸张宽度
-	public static final String KEY_PRINT_SIZE = "key_print_size";
-	// 缓存Key_打印小票序号
-	public static final String KEY_PRINT_CODE = "key_print_code";
+	// 缓存Key_班次
+	public static final String KEY_WORK = "key_work";
+	// 缓存Key_账号
+	public static final String KEY_USER = "key_user";
+	// 缓存Key_密码
+	public static final String KEY_PASSWORD = "key_password";
 	// 缓存Key_数据同步时间
 	public static final String KEY_UPDATE_TIME = "key_update_time";
-	// 缓存Key_管理密码
-	public static final String KEY_PASSWORD = "key_password";
-	// 缓存Key_签到时间
-	public static final String KEY_LOGIN_TIME = "key_login_time";
-
-	// 缓存Key_模板编辑选项-选中
-	public static final String KEY_EDIT_SHOW_1 = "key_edit_show_1";
-	public static final String KEY_EDIT_SHOW_2 = "key_edit_show_2";
-	public static final String KEY_EDIT_SHOW_3 = "key_edit_show_3";
-	public static final String KEY_EDIT_SHOW_4 = "key_edit_show_4";
-	public static final String KEY_EDIT_SHOW_5 = "key_edit_show_5";
-	public static final String KEY_EDIT_SHOW_6 = "key_edit_show_6";
-	public static final String KEY_EDIT_SHOW_7 = "key_edit_show_7";
-	public static final String KEY_EDIT_SHOW_8 = "key_edit_show_8";
-	// 缓存Key_模板编辑选项-内容
-	public static final String KEY_EDIT_TEXT_1 = "key_edit_text_1";
-	public static final String KEY_EDIT_TEXT_2 = "key_edit_text_2";
-	public static final String KEY_EDIT_TEXT_3 = "key_edit_text_3";
-	public static final String KEY_EDIT_TEXT_4 = "key_edit_text_4";
-	public static final String KEY_EDIT_TEXT_5 = "key_edit_text_5";
-	public static final String KEY_EDIT_TEXT_6 = "key_edit_text_6";
-	public static final String KEY_EDIT_TEXT_7 = "key_edit_text_7";
 
 	/**
 	 ******************************************* Key设置结束 ******************************************
@@ -102,6 +72,11 @@ public class AppConfig {
 	// 对话框事件标记
 	public static final int DIALOG_0001 = 90001; //确定
 	public static final int DIALOG_0002 = 90002; //取消
+
+	// 默认串口号
+	public static final String DEFAULT_USER = "0001";
+	// 默认串口号
+	public static final String DEFAULT_PASSWORD = "123456";
 
 	// 默认串口号
 	public static final String DEFAULT_PORT = "/dev/ttyS0";
@@ -118,9 +93,6 @@ public class AppConfig {
 	// 数据类型标记
 	public static final int DATA_TYPE_GOODS_LISTS = 601;
 	public static final int DATA_TYPE_CATEGORY_LISTS = 602;
-
-	// 默认管理员密码
-	public static final String DEFAULT_PASSWORD = "123456";
 
 	// 需动态申请的权限
 	public static final String PERMISSION_READ_EXTERNAL_STORAGE = Manifest.permission.READ_EXTERNAL_STORAGE;
