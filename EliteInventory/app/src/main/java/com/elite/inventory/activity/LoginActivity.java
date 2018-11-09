@@ -1,5 +1,6 @@
 package com.elite.inventory.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bigkoo.pickerview.TimePickerView;
+import com.elite.inventory.AppManager;
 import com.elite.inventory.R;
 import com.elite.inventory.config.AppConfig;
 import com.elite.inventory.utils.StringUtils;
@@ -88,23 +90,25 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     TimePickerView pvTime;
     boolean isData, isWord, isUser, isPassWord, isPetty, orAB, isShow;
-    String userStr, passwordStr;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         ButterKnife.bind(this);
+        AppManager.getInstance().addActivity(this);// 添加Activity到堆栈
 
         init();
         initEditText();
     }
 
     private void init() {
+        //默认账户、密码
+        sp.edit().putString(AppConfig.DEFAULT_USER, AppConfig.DEFAULT_PASSWORD).apply();
+        //最近使用的班次
         orAB = sp.getBoolean(AppConfig.KEY_WORK, false);
-        userStr = sp.getString(AppConfig.KEY_USER, AppConfig.DEFAULT_USER);
-        passwordStr = sp.getString(AppConfig.KEY_PASSWORD, AppConfig.DEFAULT_PASSWORD);
 
         ivInputWork2.setOnClickListener(this);
         ivInputPassword2.setOnClickListener(this);
@@ -132,6 +136,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         disableShowSoftInput(etInputPassword);
         disableShowSoftInput(etInputPetty);
 
+        //日期
         etInputData.setText(TimeUtils.getTimeStr("yyyy-MM-dd"));
         etInputData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,6 +151,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });
 
+        //班次
         changeWorks();
         etInputWork.setFocusable(false);
         etInputWork.setFocusableInTouchMode(false);
@@ -156,11 +162,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });*/
 
+        //用户
         etInputUser.setFocusable(true);
         etInputUser.setFocusableInTouchMode(true);
         etInputUser.requestFocus();
         isUser = true;
-        etInputUser.setText(userStr);
+        etInputUser.setText(sp.getString(AppConfig.KEY_USER, AppConfig.DEFAULT_USER));
         etInputUser.setSelection(etInputUser.length());
         etInputUser.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
@@ -169,6 +176,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });
 
+        //密码
         isShow = false;
         etInputPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -177,6 +185,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             }
         });
 
+        //备用金
         etInputPetty.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -368,10 +377,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     etInputPetty.getText().clear();
                 }
                 break;
-            case "quit":
+            case "quit": //退出应用
+                AppManager.getInstance().AppExit(getApplicationContext());
                 break;
             case "enter":
-                String et_data = etInputData.getText().toString();
+                /*String et_data = etInputData.getText().toString();
                 if (StringUtils.isNull(et_data)) {
                     ToastUtils.showToast("请选择日期", 1000);
                     return;
@@ -391,11 +401,23 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     ToastUtils.showToast("请输入备用金", 1000);
                     return;
                 }
-                if (!userStr.equals(et_user) || !passwordStr.equals(et_password)) {
-                    ToastUtils.showToast("用户名不存在或秘密错误！", 1000);
+                if (!sp.contains(et_user)) {
+                    ToastUtils.showToast("用户名不存在", 1000);
                     return;
                 }
-                ToastUtils.showToast("OK", 1000);
+                String passwordStr = sp.getString(et_user, "");
+                if (!passwordStr.equals(et_password)) {
+                    ToastUtils.showToast("密码错误", 1000);
+                    return;
+                }
+                //记录最近登录的用户名
+                sp.edit().putString(AppConfig.KEY_USER, et_user).apply();
+                //记录当前账户的备用金
+                sp.edit().putString(AppConfig.KEY_PETTY, et_petty).apply();*/
+                //进入主页
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                //关闭此页
+                finish();
                 break;
         }
     }
@@ -413,7 +435,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     /**
-     * 更新密码输入框密码显示的状态
+     * 密码状态
      */
     private void updatePasswordStatus() {
         if (isShow) { //显示密码

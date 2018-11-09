@@ -12,14 +12,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.elite.inventory.AppApplication;
+import com.elite.inventory.AppManager;
 import com.elite.inventory.R;
 import com.elite.inventory.dialog.DialogManager;
 import com.elite.inventory.utils.LogUtils;
 import com.elite.inventory.utils.ToastUtils;
 
 import java.lang.reflect.Method;
-
-import butterknife.ButterKnife;
 
 
 public class BaseActivity extends AppCompatActivity {
@@ -36,8 +35,12 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+
+        // 添加Activity到堆栈
+        AppManager.getInstance().addActivity(this);
+
         // 创建动画
-        overridePendingTransition(R.anim.in_from_right, R.anim.anim_no_anim);
+        //overridePendingTransition(R.anim.in_from_right, R.anim.anim_no_anim);
         LogUtils.i(TAG, "onCreate");
 
         mContext = this;
@@ -136,7 +139,7 @@ public class BaseActivity extends AppCompatActivity {
     public void finish() {
         super.finish();
         // 销毁动画
-        overridePendingTransition(R.anim.anim_no_anim, R.anim.out_to_left);
+        //overridePendingTransition(R.anim.anim_no_anim, R.anim.out_to_left);
     }
 
     @Override
@@ -191,7 +194,7 @@ public class BaseActivity extends AppCompatActivity {
         int flags = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+//                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                 | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         if (show) {
