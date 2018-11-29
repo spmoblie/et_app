@@ -39,29 +39,15 @@
 
         <Button
             android:id="@+id/dialog_button_cancel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/screen_margin_default"
-            android:background="@drawable/shape_bg_border_debar_4"
-            android:gravity="center"
-            android:padding="@dimen/margin_padding_8"
+            style="@style/dialog_tow_bt"
+            android:background="@drawable/shape_bg_border_debar_8"
             android:text="@string/cancel"
-            android:textColor="@color/text_color_btn_b"
-            android:textSize="@dimen/text_size_14" />
+            android:textColor="@color/text_color_btn_b" />
 
         <Button
             android:id="@+id/dialog_button_confirm"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/screen_margin_default"
-            android:background="@drawable/shape_bg_buttom_state_4"
-            android:gravity="center"
-            android:padding="@dimen/margin_padding_8"
-            android:text="@string/confirm"
-            android:textColor="@color/text_color_btn_w"
-            android:textSize="@dimen/text_size_14" />
+            style="@style/dialog_tow_bt"
+            android:text="@string/confirm" />
     </LinearLayout>
 
 </LinearLayout>

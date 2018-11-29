@@ -41,6 +41,80 @@
         <item name="android:layout_marginTop">@dimen/margin_padding_8</item>
     </style>
 
+    <style name="drawer_view_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/margin_padding_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/text_color_white</item>
+    </style>
+
+    <style name="goods_head_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/goods_item_tv_size</item>
+        <item name="android:textColor">@color/text_color_white</item>
+    </style>
+
+    <style name="goods_item_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/goods_item_tv_size</item>
+        <item name="android:textColor">@color/text_color_price</item>
+    </style>
+
+    <style name="bill_edit_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="bill_edit_et">
+        <item name="android:layout_width">325dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:paddingLeft">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_10</item>
+        <item name="android:background">@drawable/shape_bg_login_edittext</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="fragment_1_bottom_tv">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
+        <item name="android:padding">@dimen/margin_padding_5</item>
+        <item name="android:background">@drawable/shape_bg_buttom_state_8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/text_color_btn_w</item>
+    </style>
+
+    <style name="dialog_tow_bt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/margin_padding_15</item>
+        <item name="android:padding">@dimen/margin_padding_10</item>
+        <item name="android:background">@drawable/shape_bg_buttom_state_8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_btn_w</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
     <!-- 水平分割线 -->
     <style name="set_line_horizontal_bg">
         <item name="android:layout_width">match_parent</item>

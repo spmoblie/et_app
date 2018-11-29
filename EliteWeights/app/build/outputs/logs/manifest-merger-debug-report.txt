@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e2b0aa12f471f19c80ec93c87e961bd1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/52b5d3ddae5a3bb735308fa9373b58a4/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/cb3acbc5eb239f03397bed5ff7bd882d/AndroidManifest.xml:2:1-11:12
@@ -19,105 +19,105 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /root/.gradle/caches/tr
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/8a22cdc3f06672ee7f42612007464585/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/ead41b7abe747d7bdf240e8b750b01d6/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c6a444c16ac62a62cee045e4177fe73b/AndroidManifest.xml:17:1-22:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:3:5-32
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:7:5-60
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:7:5-60
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:7:19-57
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:7:19-57
 uses-permission#android.permission.CAMERA
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:9:5-65
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:9:5-65
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:9:22-62
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:9:22-62
 uses-permission#android.hardware.camera.autofocus
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:10:5-73
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:10:5-73
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:10:22-70
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:10:22-70
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:11:5-81
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:11:5-81
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:11:22-78
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:12:5-71
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:12:22-68
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:12:22-68
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:13:5-75
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:13:5-75
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:13:22-72
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:13:22-72
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:14:5-80
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:14:22-77
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:14:22-77
 application
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:16:5-43:19
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:16:5-43:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/cb3acbc5eb239f03397bed5ff7bd882d/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /root/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/cb3acbc5eb239f03397bed5ff7bd882d/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:21:9-35
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:20:9-41
 	android:hardwareAccelerated
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:18:9-43
 	android:icon
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:19:9-45
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:19:9-45
 	android:theme
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:22:9-40
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:22:9-40
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:17:9-39
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:17:9-39
 activity#com.elite.weights.activity.MainActivity
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:23:9-32:20
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:23:9-32:20
 	android:screenOrientation
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:26:13-50
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:26:13-50
 	android:label
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:25:13-45
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:24:13-50
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:24:13-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:27:13-31:29
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:28:25-66
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:30:27-74
 activity#com.elite.weights.activity.SettingActivity
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:34:9-37:57
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:34:9-37:57
 	android:screenOrientation
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:36:13-50
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:36:13-50
 	android:windowSoftInputMode
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:37:13-54
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:37:13-54
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:35:13-53
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:35:13-53
 activity#com.elite.weights.activity.RFIDActivity
-ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:39:9-41:57
+ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:39:9-41:57
 	android:screenOrientation
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:40:13-50
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:40:13-50
 	android:windowSoftInputMode
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:41:13-54
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:41:13-54
 	android:name
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml:39:19-56
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml:39:19-56
 uses-sdk
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e2b0aa12f471f19c80ec93c87e961bd1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e2b0aa12f471f19c80ec93c87e961bd1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.1] /root/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/52b5d3ddae5a3bb735308fa9373b58a4/AndroidManifest.xml:20:5-44
@@ -148,13 +148,13 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transfor
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/ead41b7abe747d7bdf240e8b750b01d6/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c6a444c16ac62a62cee045e4177fe73b/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] /root/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c6a444c16ac62a62cee045e4177fe73b/AndroidManifest.xml:20:5-44
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		ADDED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
-		INJECTED from /root/AndroidStudioProjects/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		ADDED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml
+		INJECTED from /root/Git/et_app/EliteWeights/app/src/main/AndroidManifest.xml

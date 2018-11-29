@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.elite.inventory.R;
+import com.elite.inventory.dialog.DialogManager;
 
 public class Fragment_2 extends Fragment {
 
@@ -15,6 +16,7 @@ public class Fragment_2 extends Fragment {
     private View view;
     private TextView textView;
     private String content;
+    private DialogManager dm;
 
     public static Fragment_2 newInstance(String content) {
         Fragment_2 fragment = new Fragment_2();
@@ -29,6 +31,7 @@ public class Fragment_2 extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle bundle = getArguments();
         content = bundle != null ? bundle.getString(TAG) : "";
+        dm = DialogManager.getInstance(getActivity());
     }
 
     @Override

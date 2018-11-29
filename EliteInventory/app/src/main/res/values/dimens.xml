@@ -59,6 +59,9 @@
     <dimen name="margin_padding_32">32dp</dimen>
     <dimen name="margin_padding_35">35dp</dimen>
     <dimen name="margin_padding_36">36dp</dimen>
+    <dimen name="margin_padding_37">37dp</dimen>
+    <dimen name="margin_padding_38">38dp</dimen>
+    <dimen name="margin_padding_39">39dp</dimen>
     <dimen name="margin_padding_40">40dp</dimen>
     <dimen name="margin_padding_42">42dp</dimen>
     <dimen name="margin_padding_45">45dp</dimen>
@@ -82,6 +85,7 @@
     <dimen name="margin_padding_115">115dp</dimen>
     <dimen name="margin_padding_120">120dp</dimen>
     <dimen name="margin_padding_130">130dp</dimen>
+    <dimen name="margin_padding_140">140dp</dimen>
     <dimen name="margin_padding_150">150dp</dimen>
     <dimen name="margin_padding_190">190dp</dimen>
     <dimen name="margin_padding_200">200dp</dimen>
@@ -89,14 +93,17 @@
 
     <!-- title -->
     <dimen name="title_height">@dimen/margin_padding_50</dimen>
-    <dimen name="title_text_size">@dimen/text_size_22</dimen>
+    <dimen name="title_text_size">@dimen/text_size_24</dimen>
     <dimen name="title_text_size_right">@dimen/text_size_15</dimen>
+
+    <!-- item -->
+    <dimen name="item_layout_width">@dimen/margin_padding_120</dimen>
+    <dimen name="item_layout_height">@dimen/margin_padding_70</dimen>
 
     <!-- other -->
     <dimen name="buttom_height">@dimen/margin_padding_80</dimen>
     <dimen name="buttom_text_size">@dimen/text_size_20</dimen>
-    <dimen name="main_window_margin_top">@dimen/margin_padding_6</dimen>
-    <dimen name="main_window_margin_left">@dimen/margin_padding_12</dimen>
+    <dimen name="main_window_margin">@dimen/margin_padding_38</dimen>
     <dimen name="screen_margin_default">@dimen/margin_padding_15</dimen>
 
     <!-- setting -->
@@ -110,7 +117,7 @@
 
     <!-- goods_ -->
     <dimen name="goods_item_tv_size">@dimen/text_size_16</dimen>
-    <dimen name="goods_total_tv_size">@dimen/text_size_20</dimen>
+    <dimen name="goods_total_tv_size">@dimen/text_size_26</dimen>
     <dimen name="goods_image_size">@dimen/margin_padding_60</dimen>
     <dimen name="goods_delete_size">@dimen/margin_padding_60</dimen>
     <dimen name="goods_module_space">@dimen/margin_padding_10</dimen>

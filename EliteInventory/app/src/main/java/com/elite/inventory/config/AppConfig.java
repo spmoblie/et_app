@@ -70,8 +70,8 @@ public class AppConfig {
 	 */
 
 	// 对话框事件标记
-	public static final int DIALOG_0001 = 90001; //确定
-	public static final int DIALOG_0002 = 90002; //取消
+	public static final int DIALOG_BT_LEFT = 90001; //取消
+	public static final int DIALOG_BT_RIGHT = 90002; //确定
 
 	// 默认串口号
 	public static final String DEFAULT_USER = "0001";

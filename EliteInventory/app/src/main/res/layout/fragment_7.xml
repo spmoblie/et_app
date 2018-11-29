@@ -7,7 +7,7 @@
     android:background="@color/back_color_appui">
 
     <TextView
-        android:id="@+id/fragment_home_tv"
+        android:id="@+id/fragment_7_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"

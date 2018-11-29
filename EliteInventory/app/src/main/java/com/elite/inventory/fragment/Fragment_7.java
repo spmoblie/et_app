@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 import com.elite.inventory.R;
 
-public class HomeFragment extends Fragment {
+public class Fragment_7 extends Fragment {
 
     public static final String TAG = "content";
     private View view;
     private TextView textView;
     private String content;
 
-    public static HomeFragment newInstance(String content) {
-        HomeFragment fragment = new HomeFragment();
+    public static Fragment_7 newInstance(String content) {
+        Fragment_7 fragment = new Fragment_7();
         Bundle args = new Bundle();
         args.putString(TAG, content);
         fragment.setArguments(args);
@@ -34,13 +34,13 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_7, container, false);
         init();
         return view;
     }
 
     private void init() {
-        textView = (TextView) view.findViewById(R.id.fragment_home_tv);
+        textView = (TextView) view.findViewById(R.id.fragment_7_tv);
         textView.setText(content);
     }
 

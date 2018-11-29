@@ -14,7 +14,6 @@ import android.widget.EditText;
 import com.elite.inventory.AppApplication;
 import com.elite.inventory.AppManager;
 import com.elite.inventory.R;
-import com.elite.inventory.dialog.DialogManager;
 import com.elite.inventory.utils.LogUtils;
 import com.elite.inventory.utils.ToastUtils;
 
@@ -26,10 +25,6 @@ public class BaseActivity extends AppCompatActivity {
     public static final String TAG = "BaseActivity";
 
     protected SharedPreferences sp;
-
-    private Context mContext;
-    private int dmWidth;
-    private DialogManager dm = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +38,7 @@ public class BaseActivity extends AppCompatActivity {
         //overridePendingTransition(R.anim.in_from_right, R.anim.anim_no_anim);
         LogUtils.i(TAG, "onCreate");
 
-        mContext = this;
         sp = AppApplication.getSharedPreferences();
-        dm = DialogManager.getInstance(this);
-        dmWidth = AppApplication.screenWidth * 1/4;
     }
 
 
@@ -81,7 +73,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 禁止Edittext弹出软件盘，光标依然正常显示。
+     * 禁止弹出软件盘，光标依然正常显示。
      */
     protected void disableShowSoftInput(EditText et_view) {
         if (android.os.Build.VERSION.SDK_INT <= 10) {
@@ -119,9 +111,6 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (dm != null) {
-            dm.clearInstance();
-        }
     }
 
     @Override
@@ -194,7 +183,7 @@ public class BaseActivity extends AppCompatActivity {
         int flags = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-//                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                 | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         if (show) {

@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 常用颜色值 -->
-    <color name="text_color_style">#000000</color><!-- 风格 -->
+    <color name="text_color_style">#F58807</color><!-- 风格 -->
     <color name="text_color_white">#FFFFFF</color><!-- 白色 -->
     <color name="text_color_black">#000000</color><!-- 黑色 -->
     <color name="text_color_greys">#999999</color><!-- 灰色 -->
@@ -11,34 +11,40 @@
     <color name="text_color_green">#008000</color><!-- 绿色 -->
 
     <!-- 按键文字颜色黑 -->
-    <color name="text_color_btn_b">#000000</color>
+    <color name="text_color_btn_b">#F58807</color>
     <!-- 按键文字颜色白 -->
     <color name="text_color_btn_w">#FFFFFF</color>
     <!-- 标题栏文字颜色 -->
-    <color name="text_color_title">#10AF9A</color>
+    <color name="text_color_title">#FFFFFF</color>
     <!-- 内容区文字颜色 -->
-    <color name="text_color_conte">#333333</color>
+    <color name="text_color_conte">#F58807</color>
     <!-- 标识区文字颜色 -->
-    <color name="text_color_label">#999999</color>
+    <color name="text_color_label">#F58807</color>
     <!-- 提示语文字颜色 -->
     <color name="text_color_input">#CCCCCC</color>
     <!-- 禁操作文字颜色 -->
     <color name="text_color_debar">#DDDDDD</color>
+    <!-- 已选中文字颜色 -->
+    <color name="text_color_items">#EEEEEE</color>
     <!-- 负金额文字颜色 -->
     <color name="text_color_lower">#10AF9A</color>
     <!-- 红点提醒颜色值 -->
     <color name="text_color_warns">#FF0000</color>
     <!-- 商品价格颜色值 -->
-    <color name="text_color_price">#000000</color>
+    <color name="text_color_price">#F58807</color>
+
+    <!-- 主页Item状态颜色值 -->
+    <color name="text_color_bg_se">#F58807</color>
+    <color name="text_color_bg_no">#00000000</color>
 
     <!-- AppUI背景色 -->
-    <color name="back_color_appui">#800000</color>
+    <color name="back_color_appui">#99F58807</color>
     <!-- AppUI区块色 -->
     <color name="back_color_block">#FFFFFF</color>
     <!-- AppUI状态色 -->
-    <color name="back_color_state">#10AF9A</color>
+    <color name="back_color_state">#F58807</color>
     <!-- AppUI分割线 -->
-    <color name="back_color_div_0">#FFFFFF</color>
+    <color name="back_color_div_0">#F58807</color>
     <!-- 小票据背景颜色 -->
     <color name="back_color_print">#F6F6F6</color>
 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bill_rv_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/bill_rv_item_line_top"
+        style="@style/set_line_horizontal_bg"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_10"
+        android:layout_marginBottom="@dimen/margin_padding_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bill_rv_item_tv_1"
+            style="@style/goods_item_tv"
+            android:layout_weight="4"
+            android:paddingLeft="@dimen/margin_padding_10"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/bill_rv_item_iv_ass"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_padding_60"
+                android:src="@mipmap/ic_num_ass"
+                android:scaleType="center"/>
+
+            <TextView
+                android:id="@+id/bill_rv_item_tv_2"
+                style="@style/goods_item_tv"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/bill_rv_item_iv_add"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_padding_60"
+                android:src="@mipmap/ic_num_add"
+                android:scaleType="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bill_rv_item_tv_3"
+            style="@style/goods_item_tv"/>
+
+        <TextView
+            android:id="@+id/bill_rv_item_tv_4"
+            style="@style/goods_item_tv"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/set_line_horizontal_bg" />
+
+</LinearLayout>
