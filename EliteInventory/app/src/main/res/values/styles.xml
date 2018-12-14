@@ -92,6 +92,21 @@
         <item name="android:textSize">@dimen/text_size_16</item>
     </style>
 
+    <style name="fragment_1_right_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_10</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_10</item>
+        <item name="android:paddingLeft">@dimen/margin_padding_10</item>
+        <item name="android:paddingTop">@dimen/margin_padding_5</item>
+        <item name="android:paddingRight">@dimen/margin_padding_10</item>
+        <item name="android:paddingBottom">@dimen/margin_padding_5</item>
+        <item name="android:background">@drawable/selector_text_false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/text_color_greys</item>
+    </style>
+
     <style name="fragment_1_bottom_tv">
         <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -101,6 +116,16 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_18</item>
         <item name="android:textColor">@color/text_color_btn_w</item>
+    </style>
+
+    <style name="dialog_sale_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginRight">@dimen/margin_padding_15</item>
+        <item name="android:textColor">@color/text_color_dag_c</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
     </style>
 
     <style name="dialog_tow_bt">

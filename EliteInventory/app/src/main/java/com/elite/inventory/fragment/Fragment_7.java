@@ -11,7 +11,7 @@ import com.elite.inventory.R;
 
 public class Fragment_7 extends Fragment {
 
-    public static final String TAG = "content";
+    public static final String TAG = "Fragment_7";
     private View view;
     private TextView textView;
     private String content;

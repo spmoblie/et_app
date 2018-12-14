@@ -10,7 +10,7 @@ public class GoodsEntity extends BaseEntity {
 
     private String sku; //商品编码
 
-    private String categoryId; //所属类别ID
+    private int categoryId; //所属类别ID
 
     private String weight; //重量
 
@@ -37,7 +37,7 @@ public class GoodsEntity extends BaseEntity {
 
     }
 
-    public GoodsEntity(String sku, String categoryId, String weight
+    public GoodsEntity(String sku, int categoryId, String weight
             , String brand, String model, String name
             , String productArea, String upc, String saleUnit
             , double suggestPrice, double price, double factory_price) {
@@ -63,11 +63,11 @@ public class GoodsEntity extends BaseEntity {
         this.sku = sku;
     }
 
-    public String getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 

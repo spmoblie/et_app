@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/goods_total_tv_size"
                 android:textColor="@color/text_color_redss"
-                android:layout_marginRight="@dimen/margin_padding_60"
+                android:layout_marginRight="@dimen/margin_padding_50"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>
@@ -143,6 +143,119 @@
             android:textColor="@color/text_color_white"
             android:textColorHint="@color/text_color_input"
             android:background="@drawable/shape_bg_border_state_8"/>
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_15"
+            android:text="@string/fragment_1_right_1"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/text_color_greys"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_et_code" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_2"
+            style="@style/fragment_1_right_tv"
+            android:layout_marginLeft="0dp"
+            android:text="@string/fragment_1_right_11"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_1" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_3"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_12"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_2"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_1" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_4"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_13"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_3"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_1" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_5"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_14"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_4"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_1" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_padding_15"
+            android:text="@string/fragment_1_right_2"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/text_color_greys"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_2" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_7"
+            style="@style/fragment_1_right_tv"
+            android:layout_marginLeft="0dp"
+            android:text="@string/fragment_1_right_21"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_6" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_8"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_22"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_7"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_6" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_9"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_23"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_8"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_6" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_right_10"
+            style="@style/fragment_1_right_tv"
+            android:text="@string/fragment_1_right_24"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_1_tv_right_9"
+            app:layout_constraintTop_toBottomOf="@id/fragment_1_tv_right_6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_15"
+            android:text="@string/fragment_1_right_3"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/text_color_greys"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fragment_1_tv_total_pay" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_total_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_5"
+            android:textSize="@dimen/text_size_30"
+            android:textColor="@color/text_color_redss"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_1_tv_total_detail" />
+
+        <TextView
+            android:id="@+id/fragment_1_tv_total_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_padding_15"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/text_color_greys"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_1_tv_confirm" />
 
         <TextView
             android:id="@+id/fragment_1_tv_confirm"

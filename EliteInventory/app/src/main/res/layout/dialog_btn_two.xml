@@ -14,7 +14,7 @@
         android:gravity="center"
         android:paddingLeft="@dimen/screen_margin_default"
         android:paddingRight="@dimen/screen_margin_default"
-        android:textColor="@color/text_color_title"
+        android:textColor="@color/text_color_dag_t"
         android:textSize="@dimen/text_size_18"
         android:visibility="gone" />
 
@@ -28,7 +28,7 @@
         android:ellipsize="end"
         android:minLines="1"
         android:maxLines="6"
-        android:textColor="@color/text_color_conte"
+        android:textColor="@color/text_color_dag_c"
         android:textSize="@dimen/text_size_16" />
 
     <LinearLayout

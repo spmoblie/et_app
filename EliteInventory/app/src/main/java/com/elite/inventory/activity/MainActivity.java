@@ -137,7 +137,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         Fragment fragment = fragments.get(position);
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-        //drawerLayout.closeDrawer(drawerView);
+        drawerLayout.closeDrawer(drawerView);
 
         drawerTv1.setBackgroundResource(R.color.text_color_bg_no);
         drawerTv2.setBackgroundResource(R.color.text_color_bg_no);

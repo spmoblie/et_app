@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="true" android:drawable="@drawable/shape_bg_border_state_8"/>
+    <item android:state_selected="true" android:drawable="@drawable/shape_bg_border_state_8" />
+    <item android:state_checked="true" android:drawable="@drawable/shape_bg_border_state_8" />
+    <item android:state_checked="false" android:drawable="@drawable/shape_bg_text_debar_8"/>
+    <item android:drawable="@drawable/shape_bg_text_debar_8"></item>
+
+</selector>

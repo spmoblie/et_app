@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.util.ArrayMap;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.elite.inventory.AppApplication;
 import com.elite.inventory.R;
 import com.elite.inventory.adapter.BillAdapter;
 import com.elite.inventory.config.AppConfig;
+import com.elite.inventory.dialog.BillDialog;
 import com.elite.inventory.dialog.DialogManager;
 import com.elite.inventory.entity.BillEntity;
 import com.elite.inventory.entity.GoodsEntity;
@@ -33,9 +35,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class Fragment_1 extends Fragment implements View.OnClickListener{
+public class Fragment_1 extends Fragment implements View.OnClickListener {
 
     public static final String TAG = "Fragment_1";
+
+    private static final int PAY_TYPE_1 = 1101;
+    private static final int PAY_TYPE_2 = 1102;
+    private static final int PAY_TYPE_3 = 1103;
+    private static final int PAY_TYPE_4 = 1104;
 
     @BindView(R.id.fragment_1_rv_list)
     RecyclerView rv_list;
@@ -58,15 +65,52 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
     @BindView(R.id.fragment_1_et_code)
     EditText et_code;
 
+    @BindView(R.id.fragment_1_tv_right_2)
+    TextView tv_right_2;
+
+    @BindView(R.id.fragment_1_tv_right_3)
+    TextView tv_right_3;
+
+    @BindView(R.id.fragment_1_tv_right_4)
+    TextView tv_right_4;
+
+    @BindView(R.id.fragment_1_tv_right_5)
+    TextView tv_right_5;
+
+    @BindView(R.id.fragment_1_tv_right_7)
+    TextView tv_right_7;
+
+    @BindView(R.id.fragment_1_tv_right_8)
+    TextView tv_right_8;
+
+    @BindView(R.id.fragment_1_tv_right_9)
+    TextView tv_right_9;
+
+    @BindView(R.id.fragment_1_tv_right_10)
+    TextView tv_right_10;
+
+    @BindView(R.id.fragment_1_tv_total_pay)
+    TextView tv_total_pay;
+
+    @BindView(R.id.fragment_1_tv_total_detail)
+    TextView tv_total_detail;
+
+    @BindView(R.id.fragment_1_tv_confirm)
+    TextView tv_confirm;
+
     private View view;
     private Unbinder unbinder;
 
     private Context mContext;
+    private BillDialog bd;
     private DialogManager dm;
     private DecimalFormat df;
     private BillAdapter billAdapter;
+    private String currStr;
     private int num = 0;
-    private double total = 0;
+    private int sale = 0;
+    private int payType = PAY_TYPE_2;
+    private double total, saleTotal, derate, mantissa;
 
     private ArrayList<BillEntity> al_bill = new ArrayList<BillEntity>();
     private ArrayMap<String, Integer> am_bill = new ArrayMap<String, Integer>();
@@ -84,7 +128,9 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         mContext = getActivity();
         df = new DecimalFormat("0.00");
+        bd = new BillDialog(mContext);
         dm = DialogManager.getInstance(mContext);
+        currStr = AppApplication.getCurrency();
     }
 
     @Override
@@ -102,10 +148,20 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
         tv_take.setOnClickListener(this);
         tv_clear.setOnClickListener(this);
         tv_cash_box.setOnClickListener(this);
+        tv_right_2.setOnClickListener(this);
+        tv_right_3.setOnClickListener(this);
+        tv_right_4.setOnClickListener(this);
+        tv_right_5.setOnClickListener(this);
+        tv_right_7.setOnClickListener(this);
+        tv_right_8.setOnClickListener(this);
+        tv_right_9.setOnClickListener(this);
+        tv_right_10.setOnClickListener(this);
+        tv_confirm.setOnClickListener(this);
 
         updateTotal();
         initEditText();
         initRecyclerView();
+        changeTextViewStatus(PAY_TYPE_2);
     }
 
     private void initEditText() {
@@ -133,7 +189,7 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
         billAdapter.setOnItemClickListener(new MyOnItemClickListener());
         // 设置Adapter
         rv_list.setAdapter(billAdapter);
-        rv_list.scrollToPosition(al_bill.size()-1);
+        rv_list.scrollToPosition(al_bill.size() - 1);
     }
 
     /**
@@ -150,6 +206,7 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
 
     /**
      * 新增商品
+     *
      * @param upc
      */
     private void addData(String upc) {
@@ -175,10 +232,11 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
                 data.setPrice(goodsEn.getPrice());
                 data.setSubtotal(goodsEn.getPrice());
                 al_bill.add(data);
-                pos = al_bill.size()-1;
+                pos = al_bill.size() - 1;
                 am_bill.put(upc, pos);
             }
             billAdapter.updateDatas(al_bill, pos);
+            rv_list.scrollToPosition(al_bill.size()-1);
             updateTotal();
         } else {
             ToastUtils.showToast(getString(R.string.text_input_code_error), 1000);
@@ -205,8 +263,9 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
             case R.id.fragment_1_tv_3:
                 break;
             case R.id.fragment_1_tv_4:
+                if (num <= 0) return;
                 dm.showTwoBtnDialog(null, getString(R.string.goods_clear_confirm, num),
-                        null, null,AppApplication.screenWidth/4, true, true,
+                        null, null, AppApplication.screenWidth / 4, true, true,
                         new Handler() {
                             @Override
                             public void handleMessage(Message msg) {
@@ -220,7 +279,176 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
                             }
                         });
                 break;
+            case R.id.fragment_1_tv_right_2:
+                if (total <= 0) return;
+                if (tv_right_2.isSelected()) {
+                    setStatusFalse(tv_right_2);
+                } else {
+                    bd.showSaleDialog(getString(R.string.fragment_1_right_1), total, 1,
+                            new Handler() {
+                                @Override
+                                public void handleMessage(Message msg) {
+                                    switch (msg.what) {
+                                        case AppConfig.DIALOG_BT_RIGHT:
+                                            sale = (Integer) msg.obj;
+                                            if (sale > 0) {
+                                                changeTextViewStatus(tv_right_2, tv_right_3);
+                                            }
+                                            break;
+                                    }
+                                }
+                            });
+                }
+                break;
+            case R.id.fragment_1_tv_right_3:
+                if (total <= 0) return;
+                if (tv_right_3.isSelected()) {
+                    setStatusFalse(tv_right_3);
+                } else {
+                    bd.showSaleDialog(getString(R.string.fragment_1_right_10), total, 2,
+                            new Handler() {
+                                @Override
+                                public void handleMessage(Message msg) {
+                                    switch (msg.what) {
+                                        case AppConfig.DIALOG_BT_RIGHT:
+                                            derate = (Double) msg.obj;
+                                            if (derate > 0) {
+                                                changeTextViewStatus(tv_right_3, tv_right_2);
+                                            }
+                                            break;
+                                    }
+                                }
+                            });
+                }
+                break;
+            case R.id.fragment_1_tv_right_4:
+                changeTextViewStatus(tv_right_4, tv_right_5);
+                break;
+            case R.id.fragment_1_tv_right_5:
+                changeTextViewStatus(tv_right_5, tv_right_4);
+                break;
+            case R.id.fragment_1_tv_right_7:
+                changeTextViewStatus(PAY_TYPE_1);
+                break;
+            case R.id.fragment_1_tv_right_8:
+                changeTextViewStatus(PAY_TYPE_2);
+                break;
+            case R.id.fragment_1_tv_right_9:
+                changeTextViewStatus(PAY_TYPE_3);
+                break;
+            case R.id.fragment_1_tv_right_10:
+                changeTextViewStatus(PAY_TYPE_4);
+                break;
+            case R.id.fragment_1_tv_confirm:
+                break;
         }
+    }
+
+    private void setStatusFalse(TextView tv_onclick) {
+        tv_onclick.setSelected(false);
+        tv_onclick.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        updateTotalView();
+    }
+
+    private void changeTextViewStatus(TextView tv_onclick, TextView tv_false) {
+        tv_onclick.setSelected(!tv_onclick.isSelected());
+        if (tv_onclick.isSelected()) {
+            if (tv_false.isSelected()) {
+                tv_false.setSelected(false);
+                tv_false.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+            }
+            tv_onclick.setTextColor(getResources().getColor(R.color.text_color_white, null));
+        } else {
+            tv_onclick.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        }
+        updateTotalView();
+    }
+
+    private void changeTextViewStatus(int typeCode) {
+        tv_right_7.setSelected(false);
+        tv_right_8.setSelected(false);
+        tv_right_9.setSelected(false);
+        tv_right_10.setSelected(false);
+        tv_right_7.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        tv_right_8.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        tv_right_9.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        tv_right_10.setTextColor(getResources().getColor(R.color.text_color_greys, null));
+        payType = typeCode;
+        switch (payType) {
+            case PAY_TYPE_1:
+                tv_right_7.setSelected(true);
+                tv_right_7.setTextColor(getResources().getColor(R.color.text_color_white, null));
+                break;
+            case PAY_TYPE_2:
+                tv_right_8.setSelected(true);
+                tv_right_8.setTextColor(getResources().getColor(R.color.text_color_white, null));
+                break;
+            case PAY_TYPE_3:
+                tv_right_9.setSelected(true);
+                tv_right_9.setTextColor(getResources().getColor(R.color.text_color_white, null));
+                break;
+            case PAY_TYPE_4:
+                tv_right_10.setSelected(true);
+                tv_right_10.setTextColor(getResources().getColor(R.color.text_color_white, null));
+                break;
+        }
+        updateTotalView();
+    }
+
+    private void updateTotalView() {
+        StringBuffer sb_detail = new StringBuffer();
+        switch (payType) {
+            case PAY_TYPE_1:
+                sb_detail.append(getString(R.string.fragment_1_right_21));
+                break;
+            case PAY_TYPE_2:
+                sb_detail.append(getString(R.string.fragment_1_right_22));
+                break;
+            case PAY_TYPE_3:
+                sb_detail.append(getString(R.string.fragment_1_right_23));
+                break;
+            case PAY_TYPE_4:
+                sb_detail.append(getString(R.string.fragment_1_right_24));
+                break;
+        }
+        sb_detail.append(getString(R.string.goods_pay));
+
+        boolean bl_2 = tv_right_2.isSelected();
+        boolean bl_3 = tv_right_3.isSelected();
+        boolean bl_4 = tv_right_4.isSelected();
+        boolean bl_5 = tv_right_5.isSelected();
+        if (bl_2 || bl_3) {
+            sb_detail.append("/");
+        }
+        if (bl_2) { //折扣
+            derate = 0;
+            saleTotal = total*(100-sale)/100;
+            sb_detail.append(getString(R.string.fragment_1_right_11) + sale + "% -" + currStr + df.format(saleTotal));
+        } else {
+            sale = 0;
+            saleTotal = 0;
+            if (bl_3) { //减免
+                saleTotal = derate;
+                sb_detail.append(getString(R.string.fragment_1_right_12) + "-" + currStr + df.format(saleTotal));
+            } else {
+                derate = 0;
+            }
+        }
+        if (bl_4 || bl_5) {
+            sb_detail.append("/");
+        }
+        if (bl_4) {
+            mantissa = ((total*100)%10)/100;
+            sb_detail.append(getString(R.string.fragment_1_right_13) + "-" + currStr + df.format(mantissa));
+        } else if (bl_5) {
+            mantissa = ((total*100)%100)/100;
+            sb_detail.append(getString(R.string.fragment_1_right_14) + "-" + currStr + df.format(mantissa));
+        } else {
+            mantissa = 0;
+        }
+        saleTotal += mantissa;
+        tv_total_detail.setText(sb_detail.toString());
+        tv_total_pay.setText(currStr + df.format(total - saleTotal));
     }
 
     @Override
@@ -261,22 +489,22 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
                 case "num_root":
                     billAdapter.updateDatas(al_bill, position);
                     BillEntity billEn = al_bill.get(position);
-                    dm.showEditBillDialog(billEn, new Handler() {
-                                @Override
-                                public void handleMessage(Message msg) {
-                                    switch (msg.what) {
-                                        case AppConfig.DIALOG_BT_LEFT: //删除
-                                            deleteData(position);
-                                            break;
-                                        case AppConfig.DIALOG_BT_RIGHT: //修改
-                                            BillEntity newBillEn = (BillEntity) msg.obj;
-                                            if (newBillEn != null) {
-                                                updateData(position, newBillEn.getNum(), newBillEn.getPrice());
-                                            }
-                                            break;
+                    bd.showEditBillDialog(billEn, new Handler() {
+                        @Override
+                        public void handleMessage(Message msg) {
+                            switch (msg.what) {
+                                case AppConfig.DIALOG_BT_LEFT: //删除
+                                    deleteData(position);
+                                    break;
+                                case AppConfig.DIALOG_BT_RIGHT: //修改
+                                    BillEntity newBillEn = (BillEntity) msg.obj;
+                                    if (newBillEn != null) {
+                                        updateData(position, newBillEn.getNum(), newBillEn.getPrice());
                                     }
-                                }
-                            });
+                                    break;
+                            }
+                        }
+                    });
                     break;
             }
         }
@@ -324,13 +552,23 @@ public class Fragment_1 extends Fragment implements View.OnClickListener{
     private void updateTotal() {
         num = 0;
         total = 0;
-        for (int i = 0; i < al_bill.size(); i ++) {
+        for (int i = 0; i < al_bill.size(); i++) {
             BillEntity shopEn = al_bill.get(i);
             num += shopEn.getNum();
             total += shopEn.getSubtotal();
         }
         tv_total.setText(mContext.getString(R.string.goods_number_3, num) + "   " +
-                mContext.getString(R.string.goods_curr_rmb) + df.format(Double.valueOf(total)));
+                currStr + df.format(Double.valueOf(total)));
+
+        //价格变动时"减免"恢复默认状态
+        derate = 0;
+        setStatusFalse(tv_right_3);
+        if (total > 0) {
+            updateTotalView();
+        } else {
+            //价格置0时"折扣"恢复默认状态
+            setStatusFalse(tv_right_2);
+        }
     }
 
 }

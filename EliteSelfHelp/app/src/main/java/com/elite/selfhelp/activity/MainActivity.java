@@ -175,6 +175,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         shopAdapter = new ShopAdapter(mContext, al_shop, mHandler);
         // 设置Adapter
         rv_list.setAdapter(shopAdapter);
+        rv_list.scrollToPosition(al_shop.size()-1);
         // 添加Item间距
         //rv_list.addItemDecoration(new SpaceItemDecoration(10));
     }
@@ -470,6 +471,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 am_shop.put(upc, al_shop.size() - 1);
             }
             shopAdapter.updateDatas(al_shop);
+            rv_list.scrollToPosition(al_shop.size()-1);
             updateTotal();
         } else {
             showToast(getString(R.string.text_input_code_error));

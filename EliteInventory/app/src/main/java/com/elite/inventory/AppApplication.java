@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.elite.inventory.activity.MainActivity;
+import com.elite.inventory.config.AppConfig;
 import com.elite.inventory.config.SharedConfig;
 import com.elite.inventory.utils.DeviceUtils;
 import com.elite.inventory.utils.LogUtils;
@@ -42,6 +43,20 @@ public class AppApplication extends Application {
 
 	public static SharedPreferences getSharedPreferences() {
 		return SharedConfig.getConfig(spApp).getSharedPreferences();
+	}
+
+	/**
+	 * 获取全局货币符号
+	 */
+	public static String getCurrency() {
+		return getSharedPreferences().getString(AppConfig.KEY_CURR, spApp.getString(R.string.goods_curr_rmb));
+	}
+
+	/**
+	 * 设置全局货币符号
+	 */
+	public static void setCurrency(String currStr) {
+		getSharedPreferences().edit().putString(AppConfig.KEY_CURR, currStr).apply();
 	}
 
 	/**

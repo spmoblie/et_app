@@ -3,7 +3,7 @@
     android:shape="rectangle" >
 
     <!-- 填充 -->
-    <solid android:color="#FFFFFF" />
+    <solid android:color="@color/back_color_block" />
 
     <!-- 描边 -->
     <!--<stroke

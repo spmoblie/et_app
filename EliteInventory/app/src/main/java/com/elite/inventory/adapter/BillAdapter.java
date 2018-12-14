@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.elite.inventory.AppApplication;
 import com.elite.inventory.R;
 import com.elite.inventory.entity.BillEntity;
 
@@ -28,6 +29,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder>{
     private View mHeaderView;
     private DecimalFormat df;
     private int selectPos;
+    private String currStr;
     private ArrayList<BillEntity> mDatas;
     private OnItemClickListener mListener;
 
@@ -35,6 +37,7 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder>{
         super();
         mContext = context;
         df = new DecimalFormat("0.00");
+        currStr = AppApplication.getCurrency();
         if (datas != null) {
             mDatas = datas;
             this.selectPos = datas.size() - 1;
@@ -95,8 +98,8 @@ public class BillAdapter extends RecyclerView.Adapter<BillAdapter.ViewHolder>{
         // 绑定数据到ViewHolder
         viewHolder.tv_1.setText(mDatas.get(pos).getName());
         viewHolder.tv_2.setText(String.valueOf(mDatas.get(pos).getNum()));
-        viewHolder.tv_3.setText(mContext.getString(R.string.goods_curr_rmb) + df.format(Double.valueOf(mDatas.get(pos).getPrice())));
-        viewHolder.tv_4.setText(mContext.getString(R.string.goods_curr_rmb) + df.format(Double.valueOf(mDatas.get(pos).getSubtotal())));
+        viewHolder.tv_3.setText(currStr + df.format(Double.valueOf(mDatas.get(pos).getPrice())));
+        viewHolder.tv_4.setText(currStr + df.format(Double.valueOf(mDatas.get(pos).getSubtotal())));
 
         if (i == selectPos) {
             viewHolder.ll_root.setBackgroundResource(R.color.text_color_items);

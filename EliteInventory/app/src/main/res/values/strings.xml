@@ -19,6 +19,7 @@
     <string name="goods_price_0">"0.00"</string>
     <string name="goods_name">"商品名称"</string>
     <string name="goods_name_2">"货品名称/条形码"</string>
+    <string name="goods_sum">"金额"</string>
     <string name="goods_amount">"总金额"</string>
     <string name="goods_number">"数量"</string>
     <string name="goods_number_2">"商品数量"</string>
@@ -33,6 +34,7 @@
     <string name="goods_change">"找零："</string>
     <string name="goods_unit_price">"单价"</string>
     <string name="goods_stock_show">"库存  "</string>
+    <string name="goods_pay">"支付"</string>
     <string name="goods_confirm">"确认账单"</string>
     <string name="goods_all_clear">"清空所有"</string>
     <string name="goods_clear_confirm">"确定清空购物车中的%1$d件商品么？"</string>
@@ -48,6 +50,18 @@
     <string name="fragment_1_save">"存单"</string>
     <string name="fragment_1_take">"取单"</string>
     <string name="fragment_1_cash_box">"开钱箱"</string>
+    <string name="fragment_1_right_1">"整单折扣"</string>
+    <string name="fragment_1_right_10">"整单减免"</string>
+    <string name="fragment_1_right_11">"折扣"</string>
+    <string name="fragment_1_right_12">"减免"</string>
+    <string name="fragment_1_right_13">"抹零分"</string>
+    <string name="fragment_1_right_14">"抹零角"</string>
+    <string name="fragment_1_right_2">"支付方式"</string>
+    <string name="fragment_1_right_21">"现金"</string>
+    <string name="fragment_1_right_22">"微信"</string>
+    <string name="fragment_1_right_23">"支付宝"</string>
+    <string name="fragment_1_right_24">"会员卡"</string>
+    <string name="fragment_1_right_3">"实际应收"</string>
 
     <!-- other -->
     <string name="cancel">"取消"</string>
@@ -56,6 +70,11 @@
     <string name="hour">h</string>
     <string name="minute">m</string>
     <string name="second">s</string>
+    <string name="text_input_num_0">"数量不能为0"</string>
+    <string name="text_input_num_null">"数量不能为空"</string>
+    <string name="text_input_price_0">"价格不能为0"</string>
+    <string name="text_input_price_null">"价格不能为空"</string>
+    <string name="text_input_price_error">"价格格式错误"</string>
     <string name="text_input_code">"请输入商品条形码"</string>
     <string name="text_input_code_hint">"扫描或输入商品条形码"</string>
     <string name="text_input_code_error">"无效的商品条形码"</string>

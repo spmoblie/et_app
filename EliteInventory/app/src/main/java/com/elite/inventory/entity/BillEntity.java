@@ -2,7 +2,6 @@ package com.elite.inventory.entity;
 
 /**
  * 清单列表数据实体类
- * Created by Beck on 2018/1/24.
  */
 public class BillEntity extends BaseEntity{
 

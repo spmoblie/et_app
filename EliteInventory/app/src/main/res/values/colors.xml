@@ -10,16 +10,14 @@
     <color name="text_color_yello">#FFFF00</color><!-- 黄色 -->
     <color name="text_color_green">#008000</color><!-- 绿色 -->
 
-    <!-- 按键文字颜色黑 -->
-    <color name="text_color_btn_b">#F58807</color>
-    <!-- 按键文字颜色白 -->
-    <color name="text_color_btn_w">#FFFFFF</color>
     <!-- 标题栏文字颜色 -->
     <color name="text_color_title">#FFFFFF</color>
     <!-- 内容区文字颜色 -->
     <color name="text_color_conte">#F58807</color>
     <!-- 标识区文字颜色 -->
     <color name="text_color_label">#F58807</color>
+    <!-- 可选文字状态色 -->
+    <color name="text_color_state">#F58807</color>
     <!-- 提示语文字颜色 -->
     <color name="text_color_input">#CCCCCC</color>
     <!-- 禁操作文字颜色 -->
@@ -32,6 +30,14 @@
     <color name="text_color_warns">#FF0000</color>
     <!-- 商品价格颜色值 -->
     <color name="text_color_price">#F58807</color>
+    <!-- 按键文字颜色黑 -->
+    <color name="text_color_btn_b">#F58807</color>
+    <!-- 按键文字颜色白 -->
+    <color name="text_color_btn_w">#FFFFFF</color>
+    <!-- 对话框标题颜色 -->
+    <color name="text_color_dag_t">#F58807</color>
+    <!-- 对话框内容颜色 -->
+    <color name="text_color_dag_c">#F58807</color>
 
     <!-- 主页Item状态颜色值 -->
     <color name="text_color_bg_se">#F58807</color>
@@ -41,6 +47,8 @@
     <color name="back_color_appui">#99F58807</color>
     <!-- AppUI区块色 -->
     <color name="back_color_block">#FFFFFF</color>
+    <!-- AppUI未选中 -->
+    <color name="back_color_debar">#999999</color>
     <!-- AppUI状态色 -->
     <color name="back_color_state">#F58807</color>
     <!-- AppUI分割线 -->

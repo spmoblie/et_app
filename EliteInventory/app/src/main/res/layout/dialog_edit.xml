@@ -14,7 +14,7 @@
         android:gravity="center"
         android:paddingLeft="@dimen/screen_margin_default"
         android:paddingRight="@dimen/screen_margin_default"
-        android:textColor="@color/text_color_title"
+        android:textColor="@color/text_color_dag_t"
         android:textSize="@dimen/text_size_18"
         android:visibility="gone" />
 
@@ -27,8 +27,8 @@
         android:layout_marginRight="@dimen/screen_margin_default"
         android:gravity="center"
         android:padding="@dimen/screen_margin_default"
-        android:background="@drawable/shape_bg_border_state_8"
-        android:textColor="@color/text_color_conte"
+        android:background="@drawable/shape_bg_border_debar_8"
+        android:textColor="@color/text_color_dag_c"
         android:textSize="@dimen/text_size_16" />
 
     <LinearLayout

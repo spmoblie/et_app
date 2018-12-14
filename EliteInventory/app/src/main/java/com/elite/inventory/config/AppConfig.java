@@ -55,6 +55,8 @@ public class AppConfig {
 	public static final String KEY_WORK = "key_work";
 	// 缓存Key_账号
 	public static final String KEY_USER = "key_user";
+	// 缓存Key_货币
+	public static final String KEY_CURR = "key_curr";
 	// 缓存Key_备用金
 	public static final String KEY_PETTY = "key_petty";
 	// 缓存Key_数据同步时间
