@@ -92,6 +92,30 @@
         <item name="android:textSize">@dimen/text_size_16</item>
     </style>
 
+    <style name="goods_edit_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_30</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="goods_edit_et">
+        <item name="android:layout_width">325dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:paddingLeft">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_25</item>
+        <item name="android:background">@drawable/shape_bg_login_edittext</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
     <style name="fragment_1_right_tv">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -124,8 +148,8 @@
         <item name="android:layout_marginTop">@dimen/margin_padding_15</item>
         <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
         <item name="android:layout_marginRight">@dimen/margin_padding_15</item>
-        <item name="android:textColor">@color/text_color_dag_c</item>
         <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/text_color_dag_c</item>
     </style>
 
     <style name="dialog_tow_bt">
@@ -136,8 +160,26 @@
         <item name="android:padding">@dimen/margin_padding_10</item>
         <item name="android:background">@drawable/shape_bg_buttom_state_8</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/text_color_btn_w</item>
         <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/text_color_btn_w</item>
+    </style>
+
+    <style name="tv_red_dot">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">"*"</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/text_color_warns</item>
+    </style>
+
+    <style name="goods_edit_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/margin_padding_05</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginLeft">@dimen/margin_padding_15</item>
+        <item name="android:layout_marginRight">@dimen/margin_padding_15</item>
+        <item name="android:background">@color/text_color_greys</item>
     </style>
 
     <!-- 水平分割线 -->

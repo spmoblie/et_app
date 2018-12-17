@@ -37,6 +37,7 @@ import com.elite.inventory.db.CategoryDBService;
 import com.elite.inventory.db.GoodsDBService;
 import com.elite.inventory.db.OrderDBService;
 import com.elite.inventory.dialog.DialogManager;
+import com.elite.inventory.dialog.GoodsDialog;
 import com.elite.inventory.entity.CategoryEntity;
 import com.elite.inventory.entity.GoodsEntity;
 import com.elite.inventory.utils.StringUtils;
@@ -98,6 +99,7 @@ public class Fragment_6 extends Fragment implements View.OnClickListener{
     ImageButton ib_new_edit_2;
 
     private Context mContext;
+    private GoodsDialog gd;
     private DialogManager dm;
     private GoodsDBService db_goods;
     private CategoryDBService db_category;
@@ -134,6 +136,7 @@ public class Fragment_6 extends Fragment implements View.OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        gd = new GoodsDialog(mContext);
         dm = DialogManager.getInstance(mContext);
         db_goods = GoodsDBService.getInstance(mContext);
         db_category = CategoryDBService.getInstance(mContext);
@@ -280,7 +283,14 @@ public class Fragment_6 extends Fragment implements View.OnClickListener{
                         });
                 break;
             case R.id.ib_new_add_3:
+                if (gd != null) {
+                    gd.showEditGoodsDialog(null, new Handler() {
+                        @Override
+                        public void handleMessage(Message msg) {
 
+                        }
+                    });
+                }
                 break;
             case R.id.ib_new_edit_1:
                 if (parentId <= 0) return;

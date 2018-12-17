@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/dialog_bg"
-    android:padding="0dp">
+    android:padding="0dp"
+    android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/dialog_ib_delete"
-        android:layout_width="@dimen/margin_padding_45"
-        android:layout_height="@dimen/margin_padding_45"
-        android:src="@mipmap/ic_delete"
-        android:scaleType="center"
-        android:background="@color/back_color_lc_10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/dialog_tv_goods_title"
-        style="@style/bill_edit_tv"
-        android:text="添加商品"
-        android:textSize="@dimen/text_size_20"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        <ImageButton
+            android:id="@+id/dialog_ib_delete"
+            android:layout_width="@dimen/margin_padding_45"
+            android:layout_height="@dimen/margin_padding_45"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_delete"
+            android:scaleType="center"
+            android:background="@color/back_color_lc_10"/>
+
+        <TextView
+            android:id="@+id/dialog_tv_goods_title"
+            style="@style/goods_edit_tv"
+            android:layout_centerInParent="true"
+            android:text="添加商品"
+            android:textSize="@dimen/text_size_20"/>
+
+    </RelativeLayout>
 
     <ScrollView
         android:id="@+id/dialog_sv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_title">
+        app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_title"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_ll_button">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -38,83 +44,200 @@
 
             <TextView
                 android:id="@+id/dialog_tv_goods_upc"
-                style="@style/bill_edit_tv"
-                android:text="商品条码"
+                style="@style/goods_edit_tv"
+                android:text="商品码"
                 app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                style="@style/tv_red_dot"
+                android:text="商品码"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_upc"/>
 
             <EditText
                 android:id="@+id/dialog_et_goods_upc"
-                style="@style/bill_edit_et"
+                style="@style/goods_edit_et"
                 app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_upc"/>
 
             <ImageView
-                style="@style/set_line_horizontal_bg"
-                android:layout_width="325dp"
-                android:layout_marginTop="@dimen/margin_padding_1"
-                android:layout_marginLeft="@dimen/margin_padding_15"
-                app:layout_constraintTop_toBottomOf="@+id/dialog_et_goods_upc"
-                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_upc"/>
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_upc"/>
 
             <TextView
                 android:id="@+id/dialog_tv_goods_name"
-                style="@style/bill_edit_tv"
-                android:text="商品名称"
+                style="@style/goods_edit_tv"
+                android:text="名    称"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_upc"/>
 
             <EditText
                 android:id="@+id/dialog_et_goods_name"
-                style="@style/bill_edit_et"
+                style="@style/goods_edit_et"
                 app:layout_constraintTop_toBottomOf="@+id/dialog_et_goods_upc"
                 app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_name"/>
 
             <ImageView
-                style="@style/set_line_horizontal_bg"
-                android:layout_width="325dp"
-                android:layout_marginTop="@dimen/margin_padding_1"
-                android:layout_marginLeft="@dimen/margin_padding_15"
-                app:layout_constraintTop_toBottomOf="@+id/dialog_et_goods_name"
-                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_name"/>
-
-            <TextView
-                android:id="@+id/dialog_tv_goods_category"
-                style="@style/bill_edit_tv"
-                android:text="商品分类"
-                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/goods_edit_line"
                 app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_name"/>
 
             <TextView
-                android:id="@+id/dialog_tv_bill_total_2"
-                style="@style/bill_edit_tv"
-                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_name"
-                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_category"/>
-
-            <TextView
-                android:id="@+id/dialog_tv_goods_price"
-                style="@style/bill_edit_tv"
-                android:text="商品分类"
+                android:id="@+id/dialog_tv_goods_category"
+                style="@style/goods_edit_tv"
+                android:text="分    类"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_name"/>
 
             <EditText
-                android:id="@+id/dialog_et_goods_price"
-                style="@style/bill_edit_et"
-                app:layout_constraintTop_toBottomOf="@+id/dialog_et_goods_upc"
-                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_name"/>
+                android:id="@+id/dialog_et_goods_category"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_name"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_category"/>
 
             <ImageView
-                style="@style/set_line_horizontal_bg"
-                android:layout_width="325dp"
-                android:layout_marginTop="@dimen/margin_padding_1"
-                android:layout_marginLeft="@dimen/margin_padding_15"
-                app:layout_constraintTop_toBottomOf="@+id/dialog_et_goods_name"
-                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_name"/>
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_category"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_price"
+                style="@style/goods_edit_tv"
+                android:text="售    价"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_category"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_price"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_category"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_price"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_price"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_unit"
+                style="@style/goods_edit_tv"
+                android:text="单    位"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_price"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_unit"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_price"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_unit"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_unit"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_stock"
+                style="@style/goods_edit_tv"
+                android:text="库    存"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_unit"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_stock"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_unit"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_stock"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_stock"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_cost"
+                style="@style/goods_edit_tv"
+                android:text="进货价"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_stock"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_cost"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_stock"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_cost"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_cost"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_member"
+                style="@style/goods_edit_tv"
+                android:text="会员价"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_cost"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_member"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_cost"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_member"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_member"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_origin"
+                style="@style/goods_edit_tv"
+                android:text="产    地"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_member"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_origin"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_member"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_origin"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_origin"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_component"
+                style="@style/goods_edit_tv"
+                android:text="成    分"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_origin"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_component"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_origin"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_component"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_component"/>
+
+            <TextView
+                android:id="@+id/dialog_tv_goods_quality"
+                style="@style/goods_edit_tv"
+                android:text="保质期"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_component"/>
+
+            <EditText
+                android:id="@+id/dialog_et_goods_quality"
+                style="@style/goods_edit_et"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_component"
+                app:layout_constraintLeft_toRightOf="@+id/dialog_tv_goods_quality"/>
+
+            <ImageView
+                style="@style/goods_edit_line"
+                app:layout_constraintTop_toBottomOf="@+id/dialog_tv_goods_quality"/>
 
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/dialog_ll_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
@@ -136,4 +259,4 @@
             android:text="@string/confirm" />
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

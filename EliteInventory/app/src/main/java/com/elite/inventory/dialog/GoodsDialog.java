@@ -59,12 +59,13 @@ public class GoodsDialog {
         // 设置对话框的坐标及宽高
         LayoutParams lp = mDialog.getWindow().getAttributes();
         lp.width = AppApplication.screenWidth / 3;
+        lp.height = AppApplication.screenHeight * 2/3;
         mDialog.getWindow().setAttributes(lp);
         // 初始化对话框中的子控件
         df = new DecimalFormat("0.00");
         currStr = AppApplication.getCurrency();
 
-        final TextView tv_name = (TextView) mDialog.findViewById(R.id.dialog_tv_bill_name);
+        /*final TextView tv_name = (TextView) mDialog.findViewById(R.id.dialog_tv_bill_name);
         tv_name.setText(billEn.getName());
 
         final TextView tv_total = (TextView) mDialog.findViewById(R.id.dialog_tv_bill_total_2);
@@ -178,7 +179,7 @@ public class GoodsDialog {
                 mDialog.dismiss();
             }
 
-        });
+        });*/
         // 显示对话框
         mDialog.show();
     }
