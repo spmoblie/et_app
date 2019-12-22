@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_padding_10"
+    android:background="@color/ui_bg_color_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <ImageButton
+            android:id="@+id/setting_bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            android:background="@color/ui_bg_color_percent_10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_title"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/title_text_color"/>
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/setting_sp_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_30"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setting_tv_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/setting_test_result"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <TextView
+            android:id="@+id/setting_tv_test_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting_tv_test"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/text_color_red"/>
+
+        <Button
+            android:id="@+id/setting_bt_test_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/setting_test_start"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/setting_sp_baud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_10"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setting_tv_asur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/setting_text_asur"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <EditText
+            android:id="@+id/setting_et_asur"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting_tv_asur"
+            android:background="@drawable/shape_frame_bg_app_hollow_4"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <TextView
+            android:id="@+id/setting_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_padding_50"
+            android:layout_toRightOf="@+id/setting_et_asur"
+            android:text="@string/setting_text_time"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <EditText
+            android:id="@+id/setting_et_time"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting_tv_time"
+            android:background="@drawable/shape_frame_bg_app_hollow_4"
+            android:gravity="center"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textSize="@dimen/text_size_23"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting_et_time"
+            android:layout_marginLeft="@dimen/margin_padding_15"
+            android:text="@string/setting_text_time_s"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+
+        <Button
+            android:id="@+id/setting_bt_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/setting_text_password"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/ui_bg_color_black"/>
+    </RelativeLayout>
+</LinearLayout>

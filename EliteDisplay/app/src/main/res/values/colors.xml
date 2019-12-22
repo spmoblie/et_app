@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Text字体常用颜色值 -->
+    <color name="style_text_color">#000000</color><!-- 风格 -->
+    <color name="text_color_white">#FFFFFF</color><!-- 白色 -->
+    <color name="text_color_black">#000000</color><!-- 黑色 -->
+    <color name="text_color_greys">#999999</color><!-- 灰色 -->
+    <color name="text_color_red">#FF0033</color><!-- 红色 -->
+
+    <!-- UI背景常用颜色值 -->
+    <color name="ui_bg_color_white">#FFFFFF</color><!-- 白色 -->
+    <color name="ui_bg_color_black">#000000</color><!-- 黑色 -->
+    <color name="ui_bg_color_percent_05">#7F000000</color><!-- 黑色50%透明度 -->
+    <color name="ui_bg_color_percent_08">#33000000</color><!-- 黑色80%透明度 -->
+    <color name="ui_bg_color_percent_10">#00000000</color><!-- 黑色100透明度 -->
+
+
+    <!-- 标题栏文字颜色 -->
+    <color name="title_text_color">#000000</color>
+    <!-- 内容区文字颜色 -->
+    <color name="conte_text_color">#333333</color>
+    <!-- 标识区文字颜色 -->
+    <color name="label_text_color">#999999</color>
+    <!-- 提示语文字颜色 -->
+    <color name="input_text_color">#cccccc</color>
+    <!-- 禁操作文字颜色 -->
+    <color name="debar_text_color">#cccccc</color>
+    <!-- 负金额文字颜色 -->
+    <color name="lower_text_color">#10AF9A</color>
+    <!-- 红点提醒颜色值 -->
+    <color name="warns_text_color">@color/style_text_color</color>
+    <!-- 商品价格颜色值 -->
+    <color name="price_text_color">@color/style_text_color</color>
+    <!-- 活动窗口背景色 -->
+    <color name="bg_favourable_color">#88FE6B90</color>
+
+    <!-- AppUI状态色 -->
+    <color name="ui_color_status">#999999</color>
+    <!-- AppUI背景色 -->
+    <color name="ui_bg_color_app">#FFFFFF</color>
+    <!-- AppUI区域色 -->
+    <color name="ui_bg_color_nut">#F7F7F7</color>
+    <!-- 分割线颜色值:细 -->
+    <color name="ui_bg_color_div_min_0">#E0E0E0</color>
+    <!-- 分割线颜色值:淡 -->
+    <color name="ui_bg_color_div_min_1">#EAEAEA</color>
+
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">@color/style_text_color</color>
+
+</resources>

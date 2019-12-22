@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ui_bg_color_percent_10"
+    android:paddingRight="@dimen/bill_pad_right_item">
+
+    <TextView
+        android:id="@+id/rv_item_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/bill_item_tv_size"
+        android:textColor="@color/text_color_white"/>
+
+    <TextView
+        android:id="@+id/rv_item_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/rv_item_tv_3"
+        android:layout_marginRight="@dimen/margin_padding_30"
+        android:textSize="@dimen/bill_item_tv_size"
+        android:textColor="@color/text_color_white"/>
+
+    <TextView
+        android:id="@+id/rv_item_tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/bill_item_tv_size"
+        android:textColor="@color/text_color_white"/>
+</RelativeLayout>

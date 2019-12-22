@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_info_main_fl"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_padding_15"
+    android:background="@color/ui_bg_color_percent_05">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/popup_info_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" />
+
+        <RelativeLayout
+            android:id="@+id/popup_info_rl_payment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_padding_10"
+            android:paddingBottom="@dimen/bill_pad_right"
+            android:paddingRight="@dimen/bill_pad_right"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_text_payment"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+
+            <TextView
+                android:id="@+id/popup_info_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/popup_info_rl_total"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/bill_pad_right"
+            android:paddingRight="@dimen/bill_pad_right"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_text_total"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+
+            <TextView
+                android:id="@+id/popup_info_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/popup_info_rl_change"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/bill_pad_right"
+            android:paddingRight="@dimen/bill_pad_right"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_text_change"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+
+            <TextView
+                android:id="@+id/popup_info_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/bill_total_tv_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/popup_info_iv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/icon_pay_ok"
+        android:visibility="gone"/>
+</FrameLayout>
